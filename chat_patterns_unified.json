@@ -1,0 +1,32 @@
+{
+  "KE": {
+    "interaction_count": 980,
+    "avg_response_length": 6.866326530612245,
+    "emoji_usage": 0.2938775510204082,
+    "common_words": []
+  },
+  "寻常摆渡": {
+    "interaction_count": 730,
+    "avg_response_length": 6.502739726027397,
+    "emoji_usage": 0.25753424657534246,
+    "common_words": []
+  },
+  "帅气的阿雷": {
+    "interaction_count": 6,
+    "avg_response_length": 7.833333333333333,
+    "emoji_usage": 0.0,
+    "common_words": []
+  },
+  "天才少女伊蕾娜": {
+    "interaction_count": 11,
+    "avg_response_length": 9.727272727272727,
+    "emoji_usage": 0.18181818181818182,
+    "common_words": []
+  },
+  "旅行哲": {
+    "interaction_count": 18,
+    "avg_response_length": 5.111111111111111,
+    "emoji_usage": 0.1111111111111111,
+    "common_words": []
+  }
+}

@@ -209,46 +209,7 @@ def train_chatbot():
         print("❌ 训练失败")
         return None
 
-# 测试聊天
-def test_chat():
-    """测试聊天功能"""
-    if not bot.fine_tuned_model_id:
-        # 尝试加载保存的模型ID
-        try:
-            with open('trained_model_id.txt', 'r') as f:
-                bot.fine_tuned_model_id = f.read().strip()
-            print(f"📝 加载了保存的模型ID: {bot.fine_tuned_model_id}")
-        except:
-            print("❌ 请先完成模型训练")
-            return
-    
-    # 测试不同场景
-    test_cases = [
-        {
-            "group": "当年三人分",
-            "history": ["寻常摆渡: 来不来我的世界"],
-            "friend": "寻常摆渡"
-        },
-        {
-            "group": "挑衅大帝衰微之夜", 
-            "history": ["杜预: 太愚蠢了"],
-            "friend": "杜预"
-        },
-        {
-            "group": "当年三人分",
-            "history": ["神仙传: 你太愚蠢了"],
-            "friend": "神仙传"
-        }
-    ]
-    
-    print("🧪 开始测试聊天效果...")
-    for i, case in enumerate(test_cases, 1):
-        print(f"\n--- 测试场景 {i} ---")
-        response = bot.chat(case["group"], case["history"], case["friend"])
-        print(f"群组: {case['group']}")
-        print(f"历史: {case['history']}")
-        print(f"雷🐷🐷: {response}")
-        print("-" * 50)
+# 注意：聊天测试功能已移至 model_test.py 文件
 
 if __name__ == "__main__":
     print("🤖 OpenAI GPT-3.5-turbo 聊天机器人训练系统")
@@ -259,7 +220,8 @@ if __name__ == "__main__":
     model_id = train_chatbot()
     
     if model_id:
-        print("\n🎉 训练完成！开始测试聊天效果...")
-        test_chat()
+        print(f"\n🎉 训练完成！模型ID: {model_id}")
+        print("📝 现在可以使用 model_test.py 进行聊天测试")
+        print("运行命令: python model_test.py")
     else:
         print("\n❌ 训练失败，请检查API密钥和网络连接")
